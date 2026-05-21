@@ -492,7 +492,26 @@ footer {
     margin-top: 50px;
 }
 
-/* استجابة للهواتف */
+/* ============================================ */
+/* التجاوب مع جميع الأجهزة (Responsive) */
+/* ============================================ */
+
+/* للأجهزة اللوحية والشاشات المتوسطة (تابلت) */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* للهواتف والأجهزة الصغيرة (موبايل) */
 @media (max-width: 768px) {
     header {
         width: 95%;
@@ -535,6 +554,10 @@ footer {
         font-size: 2.2rem;
     }
     
+    .hero-content h3 {
+        font-size: 1.2rem;
+    }
+    
     .hero-img .img-circle {
         width: 200px;
         height: 200px;
@@ -547,8 +570,22 @@ footer {
     .section-title {
         font-size: 2rem;
     }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
+/* للهواتف الصغيرة جداً ( أقل من 480px ) */
 @media (max-width: 480px) {
     .hero-buttons {
         flex-direction: column;
@@ -556,5 +593,60 @@ footer {
     
     .btn {
         text-align: center;
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-img .img-circle {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .hero-img i {
+        font-size: 55px;
+    }
+    
+    .stat-card {
+        min-width: 100%;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .section {
+        padding: 30px 15px;
+    }
+}
+
+/* للشاشات الأفقية على الهواتف (landscape) */
+@media (max-width: 768px) and (orientation: landscape) {
+    .navbar {
+        height: 100vh;
+        top: 70px;
+    }
+    
+    .hero {
+        gap: 30px;
+    }
+    
+    .section {
+        min-height: auto;
+        padding: 30px 15px;
     }
 }
